@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Job Application Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f0ff;
+      color: #333;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #444;
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 650px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      background-color: #fdfdfd;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      border: 1px solid #ffe2db;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #fff7f5;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #ff7a70;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(to right, #ffb3ab, #ff887a);
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #ff9b91, #ff6f61);
+    }
+  </style>
+</head>
+<body>
+  <h2>Job Application</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+
+    <label>Gender:</label><br />
+    <input type="radio" id="male" name="gender" value="male" />
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female" />
+    <label for="female">Female</label>
+
+    <input type="radio" id="others" name="gender" value="others" />
+    <label for="others">Others</label>
+
+    <br /><br />
+
+    <label for="gmail">Gmail ID:</label>
+    <input type="email" id="gmail" name="gmailID" />
+
+    <label for="phonenumber">Phone No:</label>
+    <input type="tel" id="phonenumber" name="phonenumber" />
+
+    <label for="resume">Resume:</label>
+    <input type="file" id="resume" name="resume" />
+
+    <label for="counter">Experience (in years):</label>
+    <input type="number" id="counter" name="counter" min="0" max="50" />
+
+    <fieldset>
+      <legend>Skills:</legend>
+      <input type="checkbox" id="html" name="skills" value="HTML" />
+      <label for="html">HTML</label>
+
+      <input type="checkbox" id="css" name="skills" value="CSS" />
+      <label for="css">CSS</label>
+
+      <input type="checkbox" id="js" name="skills" value="JavaScript" />
+      <label for="js">JavaScript</label>
+    </fieldset>
+
+    <label for="educationType">Highest Education:</label>
+    <select name="educationType" id="educationType">
+      <option value="8">8th Standard</option>
+      <option value="10">10th Standard/Diploma</option>
+      <option value="12">12th Standard</option>
+      <option value="bachelor">Bachelor's Degree</option>
+      <option value="master">Master's Degree</option>
+      <option value="phd">PhD</option>
+    </select>
+
+    <fieldset>
+      <legend>Availability:</legend>
+      <input type="radio" id="fulltime" name="availability" value="full-time" />
+      <label for="fulltime">Full-time</label><br />
+
+      <input type="radio" id="parttime" name="availability" value="part-time" />
+      <label for="parttime">Part-time</label><br />
+    </fieldset>
+
+    <label for="textarea1">Introduction about your Internship:</label>
+    <textarea name="introduction" id="textarea1" cols="30" rows="5"></textarea>
+
+    <input type="submit" value="Submit Application" />
+  </form>
+</body>
+</html>
