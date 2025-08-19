@@ -1,43 +1,85 @@
+// const { createElement } = require("react");
 
-function changeText(){
-    let fpara = document.getElementById('fpara');
-    fpara.textContent = "Hello world";
-}
+// const t1 = performance.now();
 
-let fpara = document.getElementById('fpara');
+// // Code-1
 
-fpara.addEventListener('click', changeText);
-  
+// for(let i=1; i<=100; i++){
+//     let para = document.createElement('p');
+//     para.textContent = "This is Para: " + i;
+//     document.body.appendChild(para); 
+// }
 
-fpara.removeEventListener('click', changeText);
+// const t2 = performance.now();
 
-let anchorElement = document.getElementById('youtube');
+// console.log("Total time taken bt code-1: " + (t2-t1));
 
-anchorElement.addEventListener('click', function(event) {
-    event.preventDefault();
-    anchorElement.textContent = "Click-Done";
-}
-);
+// Code-2
 
-let paras = document.querySelectorAll('p');
-function alertevent(event) {
-    alert("you have clicked on para: " + event.target.textContent);
-}
+// const t3 = performance.now();
 
-function alertevent(event) {
-    if(event.target.nodeName == 'SPAN') {
-        alert("you have clicked on para: " + event.target.textContent);
-    }
-}
+// let myDiv = document.createElement('div');
 
-let myDiv = document.getElementById('wrapper');
-myDiv.addEventListener('click', alertevent);
+// for(let i = 1; i<=100; i++){
+//   let para = document.createElement('p');
+//   para.textContent = "This is Para: " + i;
+//   myDiv.appendChild(para);
+// }
 
-for(let i=0; i<paras.length; i++){
-    let para = paras[i];
-    para.addEventListener('click', alertevent);
-}
+// document.body.appendChild(myDiv);
+
+// const t4 = performance.now();
+
+// console.log("Total time taken by code-2:" + (t4-t3));
 
 
+// Best Practises
+
+// let fragment = document.createDocumentFragment();
+
+// for(let i=1; i<=100; i++){
+//     let para = document.createElement('p');
+//     para.textContent = "This is para: " + (i+100);
+//     // No Reflow and No Repaint
+//     fragment.appendChild(para);
+// }
+
+// document.body.appendChild(fragment);
+
+//Promises=================================================================================
+
+// let firstPromise = new Promise( (resolve, rehject) =>{
+    
+//     setTimeout(function sayMyName(){
+//         console.log("My Name is Shivam");
+//     }, 10000);
+// });
+
+// Promise1.then((Message)=>{
+//     console.log("The ka message is " + Message);
+// }).catch((error)=>{
+//         console.log("Error: " + error);
+//     })
+
+
+// let Promise1 = new Promise((resolve, reject) =>{
+//     let success = true;
+//     if(success == true){
+//         resolve("Promise Fulfiled");
+//     } else{
+//         reject("Promise Rejected");
+//     }
+// });
+
+// Promise1.then((message)=>{
+//     console.log("First message: "+ message);
+//     return "Promise Fullfiled Second Message";
+// }).then((message)=>{
+//     console.log("Second message: "+ message);
+//     return "Promise Fullfiled Third Message";
+// }).then((message)=>{
+//     console.log("Third message: "+ message);
+    
+// })
 
 
